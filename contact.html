@@ -13,6 +13,7 @@ function sendMail() {
 
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
+	 const phone = document.getElementById("phone").value;
     const message = document.getElementById("message").value;
 
     if (!name || !email || !message) {
@@ -23,11 +24,12 @@ function sendMail() {
     const params = {
         name: name,
         email: email,
+		phone: phone,
         message: message
     };
 
     emailjs.send(
-        "service_a7lu6ws",
+        "service_j0332kf",
         "template_m8corvm",
         params
     )
@@ -36,6 +38,7 @@ function sendMail() {
 
         document.getElementById("name").value = "";
         document.getElementById("email").value = "";
+		document.getElementById("phone").value = "";
         document.getElementById("message").value = "";
     })
     .catch(function (error) {
@@ -62,6 +65,10 @@ function sendMail() {
 <div class="mb-3">
     <label class="form-label">Email</label>
     <input id="email" class="form-control" placeholder="your@email.com">
+</div>
+<div class="mb-3">
+    <label class="form-label">Phone</label>
+    <input id="phone" class="form-control" placeholder="your Mobile no.">
 </div>
 
 <div class="mb-3">
