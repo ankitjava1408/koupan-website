@@ -34,7 +34,7 @@ function setLanguage(lang){
 document.querySelectorAll('[data-lang-btn]').forEach(btn => btn.addEventListener('click', () => setLanguage(btn.dataset.langBtn)));
 setLanguage(localStorage.getItem('koupanLang') || 'en');
 
-const API_BASE = window.location.hostname === 'localhost' ? 'http://localhost:8018' : '';
+const API_BASE = window.location.hostname === 'localhost' ? 'http://192.168.1.10:8018' : '';
 const authForm = document.getElementById('authForm');
 const fullNameInput = document.getElementById('fullNameInput');
 const mobileInput = document.getElementById('mobileInput');
