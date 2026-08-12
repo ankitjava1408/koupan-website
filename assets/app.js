@@ -34,7 +34,7 @@ function setLanguage(lang){
 document.querySelectorAll('[data-lang-btn]').forEach(btn => btn.addEventListener('click', () => setLanguage(btn.dataset.langBtn)));
 setLanguage(localStorage.getItem('koupanLang') || 'en');
 
-const API_BASE = 'http://api.koupan.in:8018';
+const API_BASE = 'https://api.koupan.in:8018';
 const authForm = document.getElementById('authForm');
 const fullNameInput = document.getElementById('fullNameInput');
 const mobileInput = document.getElementById('mobileInput');
